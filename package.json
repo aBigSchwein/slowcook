@@ -16,6 +16,10 @@
     "nodejs"
   ],
   "author": "abigschwein",
+  "repository": {
+	  "type": "git", 
+	  "url": "https://github.com/aBigSchwein/slowcook.git"
+  },
   "license": "MIT",
   "dependencies": {
     "fs-extra": "^2.1.2",
