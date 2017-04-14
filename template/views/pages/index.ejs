@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include ../partials/header.ejs %>
+</head>
+<body>
+	<% include ../partials/nav.ejs %>
+	<div style="text-align:center;">
+		<h1>Welcome</h1>
+		<a href="#button" id="clickMe" class="btn btn-primary">Click me!</a>
+	</div>
+	
+	<script type="text/javascript">
+		var app = {};
+		app.POST = function(url,data,callback)
+		{
+			$.ajax({
+				method:"POST",
+				url: url,
+				data: data,
+				dataType:"JSON"
+			}).done(function(data)
+			{
+				callback(data);
+			});	
+		};
+		
+		$("#clickMe").on('click',function()
+		{
+			app.POST("/post",{key:"value"},function(data)
+			{
+				console.log(data);
+				if(data.status === "success")
+				{
+					alert(data);
+				}
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "slowcook",
+  "version": "2.0.0",
+  "description": "Installs the boilerplate code/structure for new nodeJS projects",
+  "main": "index",
+  "bin": {
+    "slowcook": "./bin/slowcook"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "boilerplate",
+    "slowcook",
+    "node",
+    "nodejs"
+  ],
+  "author": "abigschwein",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^2.1.2",
+    "minimist": "^1.2.0"
+  }
+}
